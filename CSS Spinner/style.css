@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F5FA;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: none;
+}
+
+/* spinner component */
+.spinner {
+    display: none;
+    background: conic-gradient(#3dffc9, #f7c723, #eb0ea5, #3dffc9);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+    animation: spin 1.2s linear infinite;
+}
+
+/* spinner component */
+.spinner::before {
+    content: "";
+    background-color: #fff;
+    border-radius: 50%;
+    width: 85%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* spinner component */
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+    from {
+        transform: rotate(0deg)
+    }
+}
