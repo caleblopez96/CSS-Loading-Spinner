@@ -11,4 +11,5 @@ btn.addEventListener('click', e => {
 const displaySpinner = () => {
     btn.innerText = "loading...";
     spinner.style.display = 'block';
+    btn.style.display = "none";
 }
